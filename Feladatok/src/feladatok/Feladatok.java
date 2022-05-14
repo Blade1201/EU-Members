@@ -15,7 +15,7 @@ public class Feladatok {
         List<Osztaly> osztalyok = feltolt("diakok.txt");
         System.out.println("Az osztályok száma: " + osztalyok.size());
         Collections.sort(osztalyok);
-        
+        System.out.println("");
         for (Osztaly osztaly : osztalyok) {
             System.out.println(osztaly);
         }
