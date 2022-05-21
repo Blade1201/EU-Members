@@ -116,7 +116,7 @@ public class EU {
              System.out.format("%d - %d ország\n", entry.getKey(), entry.getValue());
         }
 
-         
+      
     }
     
     
