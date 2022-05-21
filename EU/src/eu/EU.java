@@ -94,9 +94,30 @@ public class EU {
                 System.out.println("Legutoljára csatlakozott ország: " + actualPosition.getKey());
             }
         }
+        
+        
+        System.out.println("8.Feladat");
+        
+        
+        Map<Integer,Integer> statisztika = new HashMap<>();
+        
+        int ev;
+        for (LocalDate value : adatok.values()) {
+            ev = value.getYear();
+            if (!statisztika.containsKey(ev)) {
+                statisztika.put(ev, 0);
+            }
+             int csatlakozottOrszagokSzamaAzEvben = statisztika.get(ev);
+             statisztika.put(ev, csatlakozottOrszagokSzamaAzEvben + 1);
+        }
+        
+        System.out.println("Statisztika");
+        for (Map.Entry<Integer, Integer> entry : statisztika.entrySet()) {
+             System.out.format("%d - %d ország\n", entry.getKey(), entry.getValue());
+        }
+
          
     }
-    
     
     
     
@@ -123,6 +144,6 @@ public class EU {
             eu.setCsatlakozas(LocalDate.parse(darabok[1]));
             adatok.put(eu.getOrszag(),eu.getCsatlakozas());
         }
-        return null;
+     return null;   
     }
 }
